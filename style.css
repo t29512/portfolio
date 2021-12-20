@@ -30,7 +30,7 @@ header {
           align-items: center;
   height: 8vh;
   width: 100%;
-  padding: 1rem 5rem;
+  padding: 1vh 5vw;
   z-index: 10;
   background: black;
 }
@@ -85,48 +85,6 @@ footer .social-links a:hover {
   font-size: 2rem;
   cursor: pointer;
   text-decoration: none;
-}
-
-section {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 10%;
-  min-height: 100vh;
-}
-
-.intro h1 {
-  font-size: 3.5rem;
-  letter-spacing: 0.3rem;
-  font-weight: 700;
-}
-
-.intro div {
-  position: relative;
-  width: 50%;
-  overflow: hidden;
-}
-
-.intro div p {
-  font-size: 10px;
-  line-height: 10px;
-  background: url(./images/Viktor.png);
-  background-size: 80%;
-  background-repeat: no-repeat;
-  background-clip: text;
-  background-position: center;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(255, 255, 255, 0);
-}
-
-.intro .left {
-  padding-top: 20rem;
-  padding-left: 5rem;
-}
-
-.intro .right {
-  padding-top: 5%;
 }
 
 .burger-button {
@@ -214,6 +172,80 @@ section {
 .burger-button .rectangle-bottom.open {
   -webkit-transform: translateX(-0.34rem) rotate(45deg);
           transform: translateX(-0.34rem) rotate(45deg);
+}
+
+section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 10%;
+  min-height: 100vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.intro h1 {
+  font-size: 3.2vw;
+  letter-spacing: 0.3rem;
+  font-weight: 700;
+}
+
+.intro div {
+  position: relative;
+  overflow: hidden;
+  width: 50%;
+}
+
+.intro div p {
+  font-size: 10px;
+  line-height: 10px;
+  background: url(./images/Viktor.png);
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+.intro .left {
+  padding-top: 25%;
+  padding-left: 5%;
+}
+
+.intro .right {
+  padding-top: 5%;
+  padding-left: 10%;
+}
+
+@media screen and (max-width: 1000px) {
+  .intro {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .intro h1 {
+    font-size: 5vw;
+  }
+  .intro div {
+    width: 100%;
+  }
+  .intro div p {
+    max-height: 500px;
+  }
+  .intro .left {
+    height: 30vh;
+  }
+  .intro .right {
+    height: 70vh;
+  }
 }
 
 h2 {

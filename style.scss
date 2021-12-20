@@ -31,7 +31,7 @@ header {
   align-items: center;
   height: 8vh;
   width: 100%;
-  padding: 1rem 5rem;
+  padding: 1vh 5vw;
   z-index: 10;
   background: black;
   .logo {
@@ -77,48 +77,6 @@ footer {
   font-size: 2rem;
   cursor: pointer;
   text-decoration: none;
-}
-
-section {
-  position: relative;
-  display: flex;
-  padding: 0 10%;
-  min-height: 100vh;
-}
-
-.intro {
-  h1 {
-    font-size: 3.5rem;
-    letter-spacing: 0.3rem;
-    font-weight: 700;
-  }
-
-  div {
-    position: relative;
-    width: 50%;
-    overflow: hidden;
-
-    p {
-      font-size: 10px;
-      line-height: 10px;
-      background: url(./images/Viktor.png);
-      background-size: 80%;
-      background-repeat: no-repeat;
-      background-clip: text;
-      background-position: center;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: rgba(255, 255, 255, 0);
-    }
-  }
-
-  .left {
-    padding-top: 20rem;
-    padding-left: 5rem;
-  }
-
-  .right {
-    padding-top: 5%;
-  }
 }
 
 .burger-button {
@@ -183,6 +141,76 @@ section {
   }
   .rectangle-bottom.open {
     transform: translateX(-$burger-rec-translate) rotate(45deg);
+  }
+}
+
+section {
+  position: relative;
+  display: flex;
+  padding: 0 10%;
+  min-height: 100vh;
+  flex-wrap: wrap;
+}
+
+.intro {
+  h1 {
+    font-size: 3.2vw;
+    letter-spacing: 0.3rem;
+    font-weight: 700;
+  }
+
+  div {
+    position: relative;
+    overflow: hidden;
+    width: 50%;
+
+    p {
+      font-size: 10px;
+      line-height: 10px;
+      background: url(./images/Viktor.png);
+      background-size: 90%;
+      background-repeat: no-repeat;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    }
+  }
+
+  .left {
+    padding-top: 25%;
+    padding-left: 5%;
+  }
+
+  .right {
+    padding-top: 5%;
+    padding-left: 10%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .intro {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      font-size: 5vw;
+    }
+
+    div {
+      width: 100%;
+
+      p {
+        max-height: 500px;
+      }
+    }
+
+    .left {
+      height: 30vh;
+    }
+    .right {
+      height: 70vh;
+    }
   }
 }
 
