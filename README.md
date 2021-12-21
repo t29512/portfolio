@@ -2,6 +2,6 @@
 
 Hello! This is Viktor Hsieh.
 
-My personal website build with Html, Sass and Javascript.
+This is my personal website build with HTML, Sass and JavaScript.
 
 Feel free to contact me if it interests you, thank you :>
