@@ -25,17 +25,23 @@
   </head>
   <body>
     <header>
-      <a href="#intro" class="logo">VK</a>
-      <div>
-        <button class="burger-button">
-          <span class="box"></span>
-          <span class="rectangle rectangle-top rectangle-small"></span>
-          <span class="rectangle rectangle-middle"></span>
-          <span class="rectangle rectangle-bottom rectangle-small"></span>
-        </button>
-      </div>
+      <a href="#home" class="logo">VK</a>
+      <button class="burger-button">
+        <span class="rectangle rectangle-top rectangle-small"></span>
+        <span class="rectangle rectangle-middle"></span>
+        <span class="rectangle rectangle-bottom rectangle-small"></span>
+      </button>
+      <nav>
+        <span style="--i: 0"><a href="#home" class="nav-links">Home</a></span
+        ><span style="--i: 1"><a href="#about" class="nav-links">About</a></span
+        ><span style="--i: 2"
+          ><a href="#skills" class="nav-links">Skills</a></span
+        ><span style="--i: 3"
+          ><a href="#projects" class="nav-links">Projects</a></span
+        >
+      </nav>
     </header>
-    <section class="intro" id="intro">
+    <section class="home" id="home">
       <div class="left">
         <h1><span class="typed"></span></h1>
       </div>
@@ -179,20 +185,23 @@
         </p>
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
       <div>
         <h2>About</h2>
         <h3 class="sen1">
           A front-end developer who cares deeply about user experience.
         </h3>
         <h3 class="sen2">
-          Serious passion for UI design and new technologies.
+          With a digital marketing background, familiar with SEO, UX
+          optimasation.
         </h3>
-        <h3 class="sen3">The 3rd sentence.</h3>
+        <h3 class="sen3">
+          Also has a serious passion for UI design and new technologies.
+        </h3>
         <div class="spotlight"></div>
       </div>
     </section>
-    <section class="skills">
+    <section class="skills" id="skills">
       <div>
         <h2>Skills</h2>
         <ul class="container">
@@ -267,7 +276,7 @@
         </ul>
       </div>
     </section>
-    <section class="projects">
+    <section class="projects" id="projects">
       <h2>Projects</h2>
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
@@ -345,12 +354,26 @@
       <div class="swiper-pagination"></div>
     </section>
     <footer>
-      <p>2021.12 updated</p>
-      <a href="tel:+886970067478" class="phone"><p>+886970067478</p></a>
-      <a href="mailto:t7929512@gmail.com" class="mail"
+      <p class="toggle-invisible">2021.12 updated</p>
+      <a href="tel:+886970067478" class="toggle-invisible"
+        ><p>+886970067478</p></a
+      >
+      <a href="mailto:t7929512@gmail.com" class="toggle-invisible"
         ><p>t7929512@gmail.com</p></a
       >
       <ul class="social-links">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="tel:+886970067478"
+          class="fas fa-phone btn toggle-invisible"
+        ></a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="mailto:t7929512@gmail.com"
+          class="far fa-envelope btn toggle-invisible"
+        ></a>
         <a
           target="_blank"
           rel="noopener noreferrer"
@@ -366,7 +389,7 @@
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href=""
+          href="https://drive.google.com/file/d/1VtYZR7OmBhFzgchMIeWd5I9phL2_folf/view?usp=sharing"
           class="far fa-file btn"
         ></a>
       </ul>
@@ -378,10 +401,23 @@
     <!-- Burger button -->
     <script>
       const btn = document.querySelector('.burger-button');
-      btn.addEventListener('click', () => {
+      const nav = document.querySelector('nav');
+      const navLinks = document.querySelectorAll('.nav-links');
+      const btnToggle = () => {
         btn
           .querySelectorAll('span')
-          .forEach((span) => span.classList.toggle('open'));
+          .forEach((span) => span.classList.toggle('active'));
+        nav.classList.toggle('active');
+      };
+
+      btn.addEventListener('click', () => {
+        btnToggle();
+      });
+
+      navLinks.forEach((span) => {
+        span.addEventListener('click', () => {
+          btnToggle();
+        });
       });
     </script>
 
