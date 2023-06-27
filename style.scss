@@ -191,6 +191,10 @@ section {
     span {
       letter-spacing: 0.2rem;
     }
+    &:hover ~ .spotlight {
+      transform: scale(4);
+      margin: -15px;
+    }
   }
 
   div {
@@ -243,6 +247,7 @@ h2 {
     font-weight: 500;
     &:hover ~ .spotlight {
       transform: scale(4);
+      margin: -15px;
     }
   }
 
