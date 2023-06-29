@@ -337,25 +337,25 @@ h2 {
         background: rgb(221, 75, 37);
       }
       &:nth-child(2):hover > span {
-        background: rgb(38, 77, 228);
-      }
-      &:nth-child(3):hover > span {
-        background: rgb(211, 179, 44);
-      }
-      &:nth-child(4):hover > span {
-        background: rgb(94, 211, 243);
-      }
-      &:nth-child(5):hover > span {
         background: rgb(201, 97, 149);
       }
+      &:nth-child(3):hover > span {
+        background: rgb(94, 211, 243);
+      }
+      &:nth-child(4):hover > span {
+        background: rgb(127, 199, 40);
+      }
+      &:nth-child(5):hover > span {
+        background: rgb(63,174,124);
+      }
       &:nth-child(6):hover > span {
-        background: rgb(203, 56, 55);
+        background: rgb(38, 77, 228);
       }
       &:nth-child(7):hover > span {
-        background: rgb(232, 77, 52);
+        background: rgb(203, 56, 55);
       }
       &:nth-child(8):hover > span {
-        background: rgb(127, 199, 40);
+        background: rgb(232, 77, 52);
       }
     }
   }
