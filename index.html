@@ -202,80 +202,73 @@
         <div class="spotlight"></div>
       </div>
     </section>
+
     <section class="skills" id="skills">
-      <div>
-        <h2>Skills</h2>
-        <ul class="container">
-          <li>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span class="fab fa-html5"
-              ><span class="tooltips">HTML5</span></span
-            >
-          </li>
-          <li>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span class="fab fa-css3-alt"
-              ><span class="tooltips">CSS3</span></span
-            >
-          </li>
-          <li>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span class="fab fa-js-square"
-              ><span class="tooltips">JavaScript</span></span
-            >
-          </li>
-          <li>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span class="fab fa-react"
-              ><span class="tooltips">React</span></span
-            >
-          </li>
-          <li>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span class="fab fa-sass"><span class="tooltips">Sass</span></span>
-          </li>
-          <li>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span class="fab fa-npm"><span class="tooltips">NPM</span></span>
-          </li>
-          <li>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span class="fab fa-git-alt"
-              ><span class="tooltips">Git</span></span
-            >
-          </li>
-          <li>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span class="fab fa-node-js"
-              ><span class="tooltips">Node.js</span></span
-            >
-          </li>
-        </ul>
-      </div>
+      <h2>Skills</h2>
+      <ul class="container">
+        <li>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="fab fa-html5"><span class="tooltips">HTML5</span></span>
+        </li>
+        <li>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="fab fa-css3-alt"
+            ><span class="tooltips">CSS3</span></span
+          >
+        </li>
+        <li>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="fab fa-js-square"
+            ><span class="tooltips">JavaScript</span></span
+          >
+        </li>
+        <li>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="fab fa-react"><span class="tooltips">React</span></span>
+        </li>
+        <li>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="fab fa-sass"><span class="tooltips">Sass</span></span>
+        </li>
+        <li>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="fab fa-npm"><span class="tooltips">NPM</span></span>
+        </li>
+        <li>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="fab fa-git-alt"><span class="tooltips">Git</span></span>
+        </li>
+        <li>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="fab fa-node-js"
+            ><span class="tooltips">Node.js</span></span
+          >
+        </li>
+      </ul>
     </section>
     <section class="projects" id="projects">
       <h2>Projects</h2>
@@ -447,7 +440,7 @@
       </ul>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     <!-- Burger button -->
@@ -487,11 +480,34 @@
 
     <!-- spotlight -->
     <script>
-      const cursor = document.querySelector('.spotlight');
-      document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-      });
+      const spotlight = document.querySelector('.spotlight');
+
+      function moveSpotlight(e) {
+        spotlight.style.left = e.clientX + 'px';
+        spotlight.style.top = e.clientY + 'px';
+      }
+      function showSpotlight(e) {
+        spotlight.style.display = 'block';
+      }
+      function hideSpotlight(e) {
+        spotlight.style.display = 'none';
+      }
+
+      const header = document.querySelector('header');
+      const footer = document.querySelector('footer');
+      const sec1 = document.getElementById('home');
+      const sec2 = document.getElementById('about');
+      const sec3 = document.getElementById('skills');
+      const sec4 = document.getElementById('projects');
+
+      sec1.addEventListener('mousemove', moveSpotlight);
+      sec2.addEventListener('mousemove', moveSpotlight);
+      sec1.addEventListener('mouseover', showSpotlight);
+      sec2.addEventListener('mouseover', showSpotlight);
+      sec3.addEventListener('mouseover', hideSpotlight);
+      sec4.addEventListener('mouseover', hideSpotlight);
+      header.addEventListener('mouseover', hideSpotlight);
+      footer.addEventListener('mouseover', hideSpotlight);
     </script>
 
     <!-- swiper -->

@@ -191,10 +191,6 @@ section {
     span {
       letter-spacing: 0.2rem;
     }
-    &:hover ~ .spotlight {
-      transform: scale(4);
-      margin: -15px;
-    }
   }
 
   div {
@@ -250,18 +246,19 @@ h2 {
       margin: -15px;
     }
   }
+}
 
-  .spotlight {
-    position: fixed;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    background: white;
-    transition: 0.1s;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    mix-blend-mode: difference;
-  }
+.spotlight {
+  position: fixed;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: white;
+  transition: 0.05s;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  mix-blend-mode: difference;
+  display: none;
 }
 
 .skills {

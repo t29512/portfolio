@@ -169,10 +169,6 @@ section {
 .home h1 span {
   letter-spacing: 0.2rem;
 }
-.home h1:hover ~ .spotlight {
-  transform: scale(4);
-  margin: -15px;
-}
 .home div {
   position: relative;
   overflow: hidden;
@@ -222,16 +218,18 @@ h2 {
   transform: scale(4);
   margin: -15px;
 }
-.about .spotlight {
+
+.spotlight {
   position: fixed;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
   background: white;
-  transition: 0.1s;
+  transition: 0.05s;
   transform: translate(-50%, -50%);
   pointer-events: none;
   mix-blend-mode: difference;
+  display: none;
 }
 
 .skills {
