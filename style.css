@@ -50,7 +50,7 @@ footer .social-links .toggle-invisible {
   display: none;
 }
 footer .social-links a {
-  margin: 0 2px;
+  margin: 0 5px;
   transition: 0.5s;
 }
 footer .social-links a:hover {
