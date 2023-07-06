@@ -24,6 +24,7 @@
     />
     <link rel="icon" type="image/png" href="images/favico.png" />
   </head>
+
   <body>
     <header>
       <a href="#home" class="logo">VK</a>
@@ -42,6 +43,7 @@
         >
       </nav>
     </header>
+
     <section class="home" id="home">
       <div class="left">
         <h1><span class="typed"></span></h1>
@@ -186,6 +188,7 @@
         </p>
       </div>
     </section>
+
     <section class="about" id="about">
       <div>
         <h2>About</h2>
@@ -202,7 +205,6 @@
         <div class="spotlight"></div>
       </div>
     </section>
-
     <section class="skills" id="skills">
       <h2>Skills</h2>
       <ul class="container">
@@ -243,9 +245,7 @@
           <span></span>
           <span></span>
           <span></span>
-          <span class="fab fa-vuejs"
-            ><span class="tooltips">VUE</span></span
-          >
+          <span class="fab fa-vuejs"><span class="tooltips">Vue</span></span>
         </li>
         <li>
           <span></span>
@@ -270,6 +270,7 @@
         </li>
       </ul>
     </section>
+
     <section class="projects" id="projects">
       <h2>Projects</h2>
       <div class="swiper mySwiper">
@@ -350,7 +351,7 @@
             </div>
           </div> -->
           <div class="swiper-slide">
-            <img src="./images/robo-friends.png" alt="robot friends" />
+            <img src="./images/robo_friends.png" alt="Robot friends" />
             <div class="content-box">
               <h4>
                 <a
@@ -372,8 +373,8 @@
           </div>
           <div class="swiper-slide">
             <img
-              src="./images/background-generator.png"
-              alt="background generator"
+              src="./images/background_generator.png"
+              alt="Background generator"
             />
             <div class="content-box">
               <h4>
@@ -448,17 +449,16 @@
       const btn = document.querySelector('.burger-button');
       const nav = document.querySelector('nav');
       const navLinks = document.querySelectorAll('.nav-links');
+
       const btnToggle = () => {
         btn
           .querySelectorAll('span')
           .forEach((span) => span.classList.toggle('active'));
         nav.classList.toggle('active');
       };
-
       btn.addEventListener('click', () => {
         btnToggle();
       });
-
       navLinks.forEach((span) => {
         span.addEventListener('click', () => {
           btnToggle();

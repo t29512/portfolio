@@ -157,7 +157,7 @@ section {
 }
 
 .home {
-  padding-top: 0;
+  padding-top: 10px;
 }
 .home > * {
   flex-basis: 100%;
@@ -206,9 +206,6 @@ h2 {
   z-index: -1;
 }
 
-.about {
-  padding-top: 0;
-}
 .about h3 {
   padding: 2vw 0;
   font-size: 2.8vw;

@@ -179,7 +179,7 @@ section {
 }
 
 .home {
-  padding-top: 0;
+  padding-top: 10px;
   & > * {
     flex-basis: 100%;
   }
@@ -235,8 +235,6 @@ h2 {
 }
 
 .about {
-  padding-top: 0;
-
   h3 {
     padding: 2vw 0;
     font-size: 2.8vw;
@@ -346,7 +344,7 @@ h2 {
         background: rgb(127, 199, 40);
       }
       &:nth-child(5):hover > span {
-        background: rgb(63,174,124);
+        background: rgb(63, 174, 124);
       }
       &:nth-child(6):hover > span {
         background: rgb(38, 77, 228);
